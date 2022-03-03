@@ -1,3 +1,32 @@
+body{
+    background-color:  #334d47;
+    color: white; /*#CBB275 */
+}
+button{
+    background-color: #E6E1D2;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 .cursor {
-    background-color: aqua;
+    outline-style: dashed;
+    outline-color: aqua;
+    outline-width: 1px;
+}
+
+.done{
+    color: lawngreen;
+}
+
+#typing {
+    margin: auto;
+    width: 350px;
+}
+
+#stats {
+    margin: auto;
+    width: 350px;
 }
