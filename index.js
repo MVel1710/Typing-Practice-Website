@@ -2,13 +2,27 @@
 const typingDiv = document.getElementById("typing");
 const statsDiv = document.getElementById("stats");
 const startGameBtn = document.getElementById("start-game");
-console.log(typingDiv);
+const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random?maxLength=50'  //API url for random quote, max response length can be changed within the url
+//console.log(RANDOM_QUOTE_API_URL);
 
 //pregenerated text for now , API for random text will be added later
-const paragraphs = [
+/*const paragraphs = [
     'There was a',
     'Space is the boundless three-dimensional extent in which objects',
-];
+]; */
+function getRandomQuote(){
+    return fetch(RANDOM_QUOTE_API_URL) // API url
+        .then(response => response.json())
+        .then(data => data.content)
+}
+async function renderNextQuote(){
+    const quote = await getRandomQuote();
+    console.log(quote);
+    return quote;
+}
+
+paragraphs = renderNextQuote();
+console.log(paragraphs);
 
 const startGame = () => {
 
@@ -16,8 +30,8 @@ const startGame = () => {
     typingDiv.innerHTML = "";
     statsDiv.innerHTML = "";
 
-    const text = paragraphs[parseInt(Math.random() * paragraphs.length)]; // grab random text from paragraphs
-
+    const text =paragraphs ;//[parseInt(Math.random() * paragraphs.length)]; // grab random text from paragraphs
+    console.log(text);
     //dynamically create spans that will be used for text coloring later on
     const characters = text.split("").map((char) => {
         const span = document.createElement('span');
