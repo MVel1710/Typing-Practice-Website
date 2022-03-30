@@ -4,8 +4,7 @@ body{
     color: white; /*#CBB275 */
     text-align: center;
     font-size: 30px;
-    margin-top: 150px;
-    
+
 }
 
 .cursor {
@@ -21,16 +20,41 @@ body{
 .hidden{
     display: none;
 }
-
 #typing {
     margin: auto;
+    margin-top: 175px;
     width: 350px;
 }
 
 #stats {
     margin: auto;
+    margin-top: 20px;
     width: 350px;
 }
 #start-game {
-    margin-top: 350px;
+    margin-top: 25  0px;
 }
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin: auto;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
