@@ -24,4 +24,15 @@ function signUp(){
     promise.catch(e=>alert(e.message));
     alert("SignUp Successfully");
 }
+function signIn(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    const promise = auth.SignInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=> alert(e.message));
+  }
+
+function signOut(){
+  auth.signOut();
+  alert("Sign Out Successful");
+}
 
