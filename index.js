@@ -47,7 +47,7 @@ const paragraphs = [
     'Not all those who wander are lost',
     'A goal without a plan is just a wish'
 ]; 
-
+         
 console.log(paragraphs);
 
 const startGame = () => {   
