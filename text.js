@@ -1,4 +1,4 @@
-const text = [
+var text = [
     'There was a',
     'Space is the boundless three dimensional extent in which objects',
     'We gain the strength of the temptation we resist',
@@ -16,6 +16,6 @@ const text = [
     'A jug fills drop by drop',
     'Silence is a source of great strength',
     'Not all those who wander are lost',
-    'A goal without a plan is just a wish',
+    'A goal without a plan is just a wish'
 ]; 
 export {text};
